@@ -4,6 +4,21 @@ description: Website and domain checks through Datawright Labs tools on Apify. S
 tagline: Domain, website and SEO checks that return clean JSON.
 catalog_auth: Apify API token
 catalog_hosts: api.apify.com
+version: 1.0.0
+metadata:
+  openclaw:
+    primaryEnv: APIFY_TOKEN
+    requires:
+      env:
+        - APIFY_TOKEN
+      bins:
+        - python3
+    envVars:
+      - name: APIFY_TOKEN
+        required: true
+        description: Apify API token (console.apify.com/settings/integrations); runs are billed pay-per-result to this Apify account.
+    emoji: "🔎"
+    homepage: https://apify.com/datawright-labs
 ---
 
 ## Purpose
