@@ -1,10 +1,11 @@
 # Datawright web tools for AI agents
 
-Give your agent (Grok Bot, Cursor, Hermes, OpenClaw, Claude, ChatGPT/dots, Muse) nine web-data tools through [Apify's MCP server](https://mcp.apify.com). Each tool is an Apify Actor by Datawright Labs; you pay per result on your own Apify account (free accounts work, from $1 per 1,000 results).
+Give your agent (Grok Bot, Cursor, Hermes, OpenClaw, Claude, ChatGPT/dots, Muse) ten web-data tools through [Apify's MCP server](https://mcp.apify.com). Each tool is an Apify Actor by Datawright Labs; you pay per result on your own Apify account (free accounts work, from $1 per 1,000 results).
 
 | Tool | Use it to |
 |---|---|
 | [email-domain-dns-checker](https://apify.com/datawright-labs/email-domain-dns-checker) | Check SPF, DMARC, DKIM and MX for a list of domains |
+| [whois-rdap-domain-lookup](https://apify.com/datawright-labs/whois-rdap-domain-lookup) | Bulk WHOIS/RDAP: registrar, domain age, expiry, availability |
 | [ssl-certificate-checker](https://apify.com/datawright-labs/ssl-certificate-checker) | Bulk SSL certificate and domain expiry |
 | [broken-link-checker](https://apify.com/datawright-labs/broken-link-checker) | Find 404s and dead links, grouped by page |
 | [pagespeed-auditor](https://apify.com/datawright-labs/pagespeed-auditor) | Core Web Vitals / Lighthouse for many URLs |
@@ -23,6 +24,6 @@ Each tool call returns a run summary; fetch rows with the `get-dataset-items` to
 - **Muse**: install the skill in `skills/datawright-web-tools` (calls Apify's REST API directly).
 
 ## Try it
-"Check SPF, DMARC and DKIM for example.com and github.com." "Find broken links on https://crawlee.dev, max 20 pages."
+"Check SPF, DMARC and DKIM for example.com and github.com." "Find broken links on https://crawlee.dev, max 20 pages." "When do github.com and bbc.co.uk expire, and who is the registrar?"
 
 Made by Datawright Labs. MIT license.

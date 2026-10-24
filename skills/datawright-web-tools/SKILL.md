@@ -1,10 +1,10 @@
 ---
 name: datawright-web-tools
-description: Website and domain checks through Datawright Labs tools on Apify. SPF/DMARC/DKIM email-DNS audits, SSL certificate expiry, broken links, PageSpeed/Core Web Vitals, screenshots, sitemap URLs, autocomplete keyword ideas, App Store top charts, ATS job boards. Trigger phrases: check DMARC, SPF record, SSL expiry, broken links, core web vitals, pagespeed, screenshot this site, sitemap URLs, keyword ideas, app store top charts, job listings from Greenhouse/Lever/Ashby.
+description: Website and domain checks through Datawright Labs tools on Apify. SPF/DMARC/DKIM email-DNS audits, SSL certificate expiry, WHOIS/RDAP domain lookups (registrar, age, expiry, availability), broken links, PageSpeed/Core Web Vitals, screenshots, sitemap URLs, autocomplete keyword ideas, App Store top charts, ATS job boards. Trigger phrases: check DMARC, SPF record, SSL expiry, whois lookup, domain age, domain expiry, is this domain available, broken links, core web vitals, pagespeed, screenshot this site, sitemap URLs, keyword ideas, app store top charts, job listings from Greenhouse/Lever/Ashby.
 tagline: Domain, website and SEO checks that return clean JSON.
 catalog_auth: Apify API token
 catalog_hosts: api.apify.com
-version: 1.0.0
+version: 1.1.0
 metadata:
   openclaw:
     primaryEnv: APIFY_TOKEN
@@ -23,7 +23,7 @@ metadata:
 
 ## Purpose
 
-Run a Datawright Labs Actor on Apify and return its results as JSON. Use when the user asks to audit a domain's email authentication, check SSL certificates, find broken links, score page speed, screenshot pages, list a site's URLs, get keyword ideas, pull App Store charts, or collect job postings from company career boards.
+Run a Datawright Labs Actor on Apify and return its results as JSON. Use when the user asks to audit a domain's email authentication, check SSL certificates, look up WHOIS/RDAP data (registrar, creation and expiry dates, availability), find broken links, score page speed, screenshot pages, list a site's URLs, get keyword ideas, pull App Store charts, or collect job postings from company career boards.
 
 ## Tooling
 
@@ -34,6 +34,7 @@ bin/datawright.py auth                                  # verify the Apify token
 bin/datawright.py tools                                 # list available tools
 bin/datawright.py run dns example.com apify.com         # SPF, DMARC, DKIM, MX, MTA-STS
 bin/datawright.py run ssl github.com example.com        # certificate + domain expiry
+bin/datawright.py run whois github.com bbc.co.uk        # WHOIS/RDAP: registrar, age, expiry, availability
 bin/datawright.py run links https://example.com         # broken links (problems only)
 bin/datawright.py run pagespeed https://example.com     # Lighthouse scores, Core Web Vitals
 bin/datawright.py run screenshot https://example.com    # screenshot URLs
@@ -66,4 +67,4 @@ Each Actor's full input options are documented on its Apify Store page (apify.co
 
 ## Maturity
 
-🧪 Beta: CLI live-tested against the Apify API on 2026-10-22 (auth, dns, ssl). Not yet run inside a Muse account.
+🧪 Beta: CLI live-tested against the Apify API on 2026-10-22 (auth, dns, ssl) and 2026-10-24 (whois). Not yet run inside a Muse account.
