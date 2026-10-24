@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "datawright": {
-      "url": "https://mcp.apify.com?tools=datawright-labs/pagespeed-auditor,datawright-labs/ats-jobs-scraper,datawright-labs/website-screenshot,datawright-labs/sitemap-url-extractor,datawright-labs/autocomplete-keyword-scraper,datawright-labs/app-store-top-charts,datawright-labs/broken-link-checker,datawright-labs/ssl-certificate-checker,datawright-labs/email-domain-dns-checker,datawright-labs/whois-rdap-domain-lookup",
+      "url": "https://mcp.apify.com?tools=datawright-labs/pagespeed-auditor,datawright-labs/ats-jobs-scraper,datawright-labs/website-screenshot,datawright-labs/sitemap-url-extractor,datawright-labs/autocomplete-keyword-scraper,datawright-labs/app-store-top-charts,datawright-labs/broken-link-checker,datawright-labs/ssl-certificate-checker,datawright-labs/email-domain-dns-checker,datawright-labs/whois-rdap-domain-lookup,datawright-labs/security-headers-checker",
       "headers": {
         "Authorization": "Bearer ${APIFY_TOKEN}"
       }

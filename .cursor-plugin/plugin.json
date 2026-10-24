@@ -1,8 +1,8 @@
 {
   "name": "datawright-agent-tools",
   "displayName": "Datawright web tools",
-  "version": "0.2.0",
-  "description": "Let your agent audit domains and websites: SPF/DMARC/DKIM, SSL and domain expiry, WHOIS/RDAP lookups (registrar, domain age, availability), broken links, Core Web Vitals, screenshots and PDFs, sitemap URLs, keyword suggestions, App Store charts and ATS job feeds. Pay-per-result on your own Apify account.",
+  "version": "0.3.0",
+  "description": "Let your agent audit domains and websites: SPF/DMARC/DKIM, SSL and domain expiry, WHOIS/RDAP lookups (registrar, domain age, availability), HTTP security headers with an A-F grade, broken links, Core Web Vitals, screenshots and PDFs, sitemap URLs, keyword suggestions, App Store charts and ATS job feeds. Pay-per-result on your own Apify account.",
   "author": {
     "name": "Datawright Labs"
   },
@@ -17,6 +17,7 @@
     "dmarc",
     "whois",
     "ssl",
+    "security-headers",
     "broken-links",
     "web-data"
   ],
