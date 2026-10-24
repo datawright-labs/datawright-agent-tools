@@ -1,0 +1,24 @@
+{
+  "name": "datawright-agent-tools",
+  "displayName": "Datawright web tools",
+  "version": "0.1.0",
+  "description": "Let your agent audit domains and websites: SPF/DMARC/DKIM, SSL and domain expiry, broken links, Core Web Vitals, screenshots and PDFs, sitemap URLs, keyword suggestions, App Store charts and ATS job feeds. Pay-per-result on your own Apify account.",
+  "author": {
+    "name": "Datawright Labs"
+  },
+  "homepage": "https://apify.com/datawright-labs",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "keywords": [
+    "mcp",
+    "apify",
+    "seo",
+    "dns",
+    "dmarc",
+    "ssl",
+    "broken-links",
+    "web-data"
+  ],
+  "mcpServers": "mcp.json",
+  "skills": "skills/"
+}
