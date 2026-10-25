@@ -1,10 +1,10 @@
 ---
 name: datawright-web-tools
-description: Website and domain checks through Datawright Labs tools on Apify. SPF/DMARC/DKIM email-DNS audits, SSL certificate expiry, WHOIS/RDAP domain lookups (registrar, age, expiry, availability), HTTP security headers (HSTS, CSP, A-F grade), redirect chains and site-migration redirect checks, broken links, PageSpeed/Core Web Vitals, screenshots, sitemap URLs, autocomplete keyword ideas, App Store top charts, ATS job boards. Trigger phrases: check DMARC, SPF record, SSL expiry, whois lookup, domain age, domain expiry, is this domain available, security headers, check HSTS, CSP header, check redirects, redirect chain, 301 redirect, migration redirects, broken links, core web vitals, pagespeed, screenshot this site, sitemap URLs, keyword ideas, app store top charts, job listings from Greenhouse/Lever/Ashby.
+description: Website and domain checks through Datawright Labs tools on Apify. SPF/DMARC/DKIM email-DNS audits, SSL certificate expiry, WHOIS/RDAP domain lookups (registrar, age, expiry, availability), HTTP security headers (HSTS, CSP, A-F grade), redirect chains and site-migration redirect checks, SEO meta tags / Open Graph / schema.org checks, broken links, PageSpeed/Core Web Vitals, screenshots, sitemap URLs, autocomplete keyword ideas, App Store top charts, ATS job boards. Trigger phrases: check DMARC, SPF record, SSL expiry, whois lookup, domain age, domain expiry, is this domain available, security headers, check HSTS, CSP header, check redirects, redirect chain, 301 redirect, migration redirects, check meta tags, open graph checker, og image, twitter card, schema markup, json-ld, broken links, core web vitals, pagespeed, screenshot this site, sitemap URLs, keyword ideas, app store top charts, job listings from Greenhouse/Lever/Ashby.
 tagline: Domain, website and SEO checks that return clean JSON.
 catalog_auth: Apify API token
 catalog_hosts: api.apify.com
-version: 1.3.0
+version: 1.4.0
 metadata:
   openclaw:
     primaryEnv: APIFY_TOKEN
@@ -23,7 +23,7 @@ metadata:
 
 ## Purpose
 
-Run a Datawright Labs Actor on Apify and return its results as JSON. Use when the user asks to audit a domain's email authentication, check SSL certificates, look up WHOIS/RDAP data (registrar, creation and expiry dates, availability), grade HTTP security headers, trace redirect chains or verify site-migration redirects, find broken links, score page speed, screenshot pages, list a site's URLs, get keyword ideas, pull App Store charts, or collect job postings from company career boards.
+Run a Datawright Labs Actor on Apify and return its results as JSON. Use when the user asks to audit a domain's email authentication, check SSL certificates, look up WHOIS/RDAP data (registrar, creation and expiry dates, availability), grade HTTP security headers, trace redirect chains or verify site-migration redirects, check SEO meta tags, Open Graph previews or schema.org markup, find broken links, score page speed, screenshot pages, list a site's URLs, get keyword ideas, pull App Store charts, or collect job postings from company career boards.
 
 ## Tooling
 
@@ -37,6 +37,7 @@ bin/datawright.py run ssl github.com example.com        # certificate + domain e
 bin/datawright.py run whois github.com bbc.co.uk        # WHOIS/RDAP: registrar, age, expiry, availability
 bin/datawright.py run headers apify.com example.com     # security headers, HTTPS redirect, cookies, A-F grade
 bin/datawright.py run redirects http://github.com "http://bbc.com->https://www.bbc.com/"   # redirect chain, final status, expected-target check
+bin/datawright.py run meta https://apify.com https://www.bbc.com/news   # title, description, canonical, Open Graph, schema.org, problems
 bin/datawright.py run links https://example.com         # broken links (problems only)
 bin/datawright.py run pagespeed https://example.com     # Lighthouse scores, Core Web Vitals
 bin/datawright.py run screenshot https://example.com    # screenshot URLs

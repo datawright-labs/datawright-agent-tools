@@ -1,6 +1,6 @@
 # Datawright web tools for AI agents
 
-Give your agent (Grok Bot, Cursor, Hermes, OpenClaw, Claude, ChatGPT/dots, Muse) twelve web-data tools through [Apify's MCP server](https://mcp.apify.com). Each tool is an Apify Actor by Datawright Labs; you pay per result on your own Apify account (free accounts work, from $0.20 per 1,000 results).
+Give your agent (Grok Bot, Cursor, Hermes, OpenClaw, Claude, ChatGPT/dots, Muse) thirteen web-data tools through [Apify's MCP server](https://mcp.apify.com). Each tool is an Apify Actor by Datawright Labs; you pay per result on your own Apify account (free accounts work, from $0.20 per 1,000 results).
 
 | Tool | Use it to |
 |---|---|
@@ -9,6 +9,7 @@ Give your agent (Grok Bot, Cursor, Hermes, OpenClaw, Claude, ChatGPT/dots, Muse)
 | [ssl-certificate-checker](https://apify.com/datawright-labs/ssl-certificate-checker) | Bulk SSL certificate and domain expiry |
 | [security-headers-checker](https://apify.com/datawright-labs/security-headers-checker) | HTTP security headers (HSTS, CSP, X-Frame-Options, cookies, HTTPS redirect), A-F grade per URL |
 | [redirect-checker](https://apify.com/datawright-labs/redirect-checker) | Bulk redirect chains (301/302, meta refresh), final status, and old-to-new URL checks for site migrations |
+| [meta-tags-checker](https://apify.com/datawright-labs/meta-tags-checker) | Bulk SEO meta tags, Open Graph / Twitter cards (og:image tested) and schema.org JSON-LD, with a problems list per URL |
 | [broken-link-checker](https://apify.com/datawright-labs/broken-link-checker) | Find 404s and dead links, grouped by page |
 | [pagespeed-auditor](https://apify.com/datawright-labs/pagespeed-auditor) | Core Web Vitals / Lighthouse for many URLs |
 | [website-screenshot](https://apify.com/datawright-labs/website-screenshot) | Full-page, mobile screenshots and URL to PDF |
@@ -26,6 +27,6 @@ Each tool call returns a run summary; fetch rows with the `get-dataset-items` to
 - **Muse**: install the skill in `skills/datawright-web-tools` (calls Apify's REST API directly).
 
 ## Try it
-"Check SPF, DMARC and DKIM for example.com and github.com." "Find broken links on https://crawlee.dev, max 20 pages." "When do github.com and bbc.co.uk expire, and who is the registrar?" "Grade the security headers of apify.com and example.com and tell me what to fix." "Check that http://github.com and http://bbc.com redirect to HTTPS in one hop."
+"Check SPF, DMARC and DKIM for example.com and github.com." "Find broken links on https://crawlee.dev, max 20 pages." "When do github.com and bbc.co.uk expire, and who is the registrar?" "Grade the security headers of apify.com and example.com and tell me what to fix." "Check that http://github.com and http://bbc.com redirect to HTTPS in one hop." "Check the title, description and Open Graph tags of https://apify.com and https://www.bbc.com/news, and tell me what's missing."
 
 Made by Datawright Labs. MIT license.
