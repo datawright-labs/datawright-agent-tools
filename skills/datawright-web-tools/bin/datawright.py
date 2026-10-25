@@ -8,6 +8,7 @@ TOOLS = {
     "ssl":         ("ssl-certificate-checker", "SSL certificate expiry, issuer, chain, domain expiry", "domains"),
     "whois":       ("whois-rdap-domain-lookup", "WHOIS/RDAP: registrar, domain age, expiry, availability", "domains"),
     "headers":     ("security-headers-checker", "HTTP security headers, HTTPS redirect, cookies, A-F grade", "urls"),
+    "redirects":   ("redirect-checker", "Redirect chains, final status, migration old->new checks", "urls"),
     "links":       ("broken-link-checker", "Crawl sites and report broken links", "startUrls"),
     "pagespeed":   ("pagespeed-auditor", "Lighthouse / Core Web Vitals scores for URLs", "urls"),
     "screenshot":  ("website-screenshot", "Full-page screenshots of URLs", "urls"),
